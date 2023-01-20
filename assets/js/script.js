@@ -102,7 +102,8 @@ function showModal(popupTrigger, fileName) {
 
 	downloadBtn.addEventListener('click', () => {
 		
-		fetch("/site/downloads.php", {
+		//fetch("/site/downloads.php", {
+		fetch("https://skandalisvlassis.com/external-assets/devils/downloads.php", {
 			method: 'POST',
 			//headers: { 'Content-type': 'application/json' },
 			body: JSON.stringify({

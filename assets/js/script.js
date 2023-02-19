@@ -50,7 +50,10 @@ function openAccordionItem(menuItems)
 			}
 
 			let accordionBtn = document.querySelector(`${itemToOpen} button`)
-			accordionBtn.click()
+
+			if (accordionBtn.getAttribute('aria-expanded') == 'false') { 
+				accordionBtn.click()
+			}
 		})
 	})
 }
@@ -102,8 +105,7 @@ function showModal(popupTrigger, fileName) {
 
 	downloadBtn.addEventListener('click', () => {
 		
-		//fetch("/site/downloads.php", {
-		fetch("https://skandalisvlassis.com/external-assets/devils/downloads.php", {
+		fetch("/site/downloads.php", {
 			method: 'POST',
 			//headers: { 'Content-type': 'application/json' },
 			body: JSON.stringify({

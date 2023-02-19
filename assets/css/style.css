@@ -569,7 +569,7 @@ li#mobileMenuLogo {
 	align-items: center;
 }
 #manifesto .col.morePaddingTopDesktop {
-	padding-top: 9vw;
+	padding-top: 7vw;
 }
 #manifesto .bordered {	
 	border: 2px solid #fff;
@@ -592,8 +592,8 @@ li#mobileMenuLogo {
 }
 .manifesto p {	
 	margin-top: 2vw;
-	font-size: 2vw;
-	line-height: 3vw;
+	font-size: 1.4vw;
+	line-height: 1.7vw;
 }
 
 /* // MANIFESTO */
@@ -690,8 +690,8 @@ li#mobileMenuLogo {
 	border-bottom: none;
 }
 .team .teamData p {
-	font-size: 2vw;
-	line-height: 3vw;
+	font-size: 1.4vw;
+	line-height: 1.7vw;
 }
 /* .team p:first-line {
 	line-height: 100% !important;
@@ -728,9 +728,9 @@ li#mobileMenuLogo {
 	padding: 7vw;
 }
 #contact p {
-	font-size: 3vw;
+	font-size: 2vw;
 	margin-left: 11vw;
-	line-height: 4vw;
+	line-height: 2.4vw;
 	margin-bottom: 6vw;
 }
 #contact p span {
@@ -833,9 +833,10 @@ html {
 }
 .downloads h3 {
 	margin: 2rem 0;
-	font-size: 2vw;
+	font-size: 1.7vw;
 	font-weight: 700;
 	line-height: 2vw;
+	
 }
 .downloads .downloadData:last-child {
 	border-bottom: none;
@@ -955,12 +956,12 @@ section {
 
 /* FOOTER */
 footer {
-	font-size: 1.4vw;
-	line-height: 1.7vw;
+	font-size: 1vw;
+	line-height: 1.2vw;
 	font-weight: 700;
 }
 footer .col {
-	padding: 3vw 0;
+	padding: 2.5vw 0;
 }
 footer nav ul {
 	display: flex;
@@ -1076,7 +1077,7 @@ footer nav ul li:not(:last-child)::after {
 		margin: 4vw 0;
 		width: 17.5vw;
 		height: 17.5vw;
-		font-size: 12vw;
+		font-size: 10vw;
 		line-height: 16vw;
 	}
 	.manifesto p {

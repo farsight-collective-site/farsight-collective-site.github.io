@@ -44,10 +44,28 @@ function openAccordionItem(menuItems)
 		i.addEventListener('click', () => {
 			let itemToOpen = i.getAttribute("href")
 
-			// Bad fix. This was added so that the HTML stays the same. 		
-			if (itemToOpen == '#contact-info') {
-				itemToOpen = '#contact'
+			// Bad fix. This was added so that the HTML stays the same.
+			
+			switch (itemToOpen) {
+				case '#the-manifesto':
+					itemToOpen = '#manifesto'
+					break;
+				case '#the-team':
+					itemToOpen = '#team'
+					break;
+				case '#the-projects':
+					itemToOpen = '#projects'
+					break;
+				case '#contact-info':
+					itemToOpen = '#contact'
+					break;
+			
+				default:
+					break;
 			}
+			/* if (itemToOpen == '#contact-info') {
+				itemToOpen = '#contact'
+			} */
 
 			let accordionBtn = document.querySelector(`${itemToOpen} button`)
 
@@ -105,7 +123,8 @@ function showModal(popupTrigger, fileName) {
 
 	downloadBtn.addEventListener('click', () => {
 		
-		fetch("/site/downloads.php", {
+		//fetch("/site/downloads.php", {
+		fetch("https://skandalisvlassis.com/external-assets/devils/downloads.php", {
 			method: 'POST',
 			//headers: { 'Content-type': 'application/json' },
 			body: JSON.stringify({

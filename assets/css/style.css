@@ -25,6 +25,15 @@ body .syne {
 body .grotesk {
 	font-family: 'Space Grotesk', sans-serif;
 }
+.anchor {
+	display: block;
+	position: relative;
+	top: -138px;
+	visibility: hidden;
+}
+.anchor#contact-info {
+	top: -250px;
+}
 .row {
   display: flex;
   flex-direction: row;
@@ -628,13 +637,6 @@ li#mobileMenuLogo {
 
 
 /* TEAM */
-#the-team,
-#contact-info {
-	display: block;
-	position: relative;
-	top: -250px;
-	visibility: hidden;
-}
 #team h2 {
 	display: flex;
 	align-items: flex-start;

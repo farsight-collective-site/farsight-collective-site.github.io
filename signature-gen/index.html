@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farsight Collective email signature generator</title>
+  <link rel="icon" type="image/x-icon" href="fav.png">
+  
+  <style>
+	body {
+		font-family: Courier New, Arial, sans-serif;		   
+	}
+	.flex {
+		 display: flex;
+    gap: 55px;
+    align-items: center;
+	margin-bottom: 50px;
+	}
+
+	input[type=text] {
+		display: block;
+		height: 32px;
+		padding: 6px 16px;
+		border: none;
+		background-color: #f3f3f3;
+		min-width: 300px;
+	}
+
+	button {
+font-family: Courier New, Arial, sans-serif;		  
+		display: inline-block;
+		outline: 0;
+		cursor: pointer;
+		border-radius: 3px;		
+		font-size: 13px;
+		text-align: center;
+		font-weight: 500;
+		border: 2px solid black;
+    color: black;
+    padding: 5px;	
+                
+	}
+
+  </style>
+</head>
+<body>
+ <section class="flex">
+	 <section >
+    <h3>Add info</h3>
+    <form id="signatureForm">
+      <label for="nameInput">Name:</label>
+      <input type="text" id="nameInput" name="nameInput" value="">
+
+      <label for="positionInput">Position:</label>
+      <input type="text" id="positionInput" name="positionInput" value="">
+
+	  <label for="emailInput">Email:</label>
+      <input type="text" id="emailInput" name="emailInput" value="@farsightcollective.com">
+
+      <label for="telInput">Telephone:</label>
+      <input type="text" id="telInput" name="telInput" value="">
+
+	  <br>
+    </form>
+	 <button onclick="copySignature()">Copy Signature (for gmail)</button>
+	 <button onclick="copyCode()">Copy Signature (code)</button>
+  </section>
+
+  <section id="toCopy">
+    <table cellpadding="0" cellspacing="0" style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Courier New, Arial, sans-serif;">
+      <tbody>
+        <tr>
+          <td>
+            <table cellpadding="0" cellspacing="0" style="border-collapse: collapse; vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Courier New, Arial, sans-serif;">
+              <tbody>
+				<tr style="border-bottom: 3px solid black;">
+					<td>
+						<img style="max-width: 110px; padding: 0;" src="https://skandalisvlassis.com/external-assets/devils/signature/farshight-collective-logo.jpg" alt="Farsight Collective">					
+					</td>
+				</tr>
+                <tr>
+                  <td style="padding: 0px; vertical-align: top;">
+                    <h2 id="name" color="#000000" style="margin: 0px; font-size: 15px; color: #000000; font-weight: 600;  margin-top: 10px;">Name</h2>
+                    <p id="position" color="#000000" font-size="medium" style="margin: 0px; color: #000000; font-size: 15px; font-weight: 600;  margin-top: 0px;">Position</p>
+                    <table cellpadding="0" cellspacing="0" style="width: 100%; vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Courier New, Arial, sans-serif;">
+                      <tbody>                                             
+                        <tr>
+                          <td>
+                            <p style="font-size: 13px; margin-top: 5px; margin-bottom: 5px;">
+							  <span style="font-weight: 600; display: block;">e: <a href="" style="color: #000000; text-decoration: none; font-family: Courier New, Arial, sans-serif;" id="email">#######@####.###</a></span>							  
+                              <span style="font-weight: 600; display: block;">t: <a href="" style="color: #000000; text-decoration: none; font-family: Courier New, Arial, sans-serif;" id="tel">+44 #### ######</a></span>
+                              <span style="font-weight: 600; margin-bottom: 10px; display: block;">w: <a href="https://farsightcollective.com" style="color: #000000; text-decoration: none; font-family: Courier New, Arial, sans-serif;" id="website">farsightcollective.com</a></span>
+                              <span style="font-weight: 600;"> <a href="https://goo.gl/maps/1oeXMNSVVM3kqxxv7" style="color: #000000; text-decoration: none; font-family: Courier New, Arial, sans-serif;">Book Mews/6 Flitcroft Street/London/W2H 8DJ</a></span>
+                            </p>
+                          </td>
+                        </tr>                        
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  </section>
+
+ 
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get the input fields
+    const nameInput = document.getElementById("nameInput");
+    const positionInput = document.getElementById("positionInput");
+    const telInput = document.getElementById("telInput");
+    const emailInput = document.getElementById("emailInput");
+
+    // Get the signature elements
+    const nameElement = document.getElementById("name");
+    const positionElement = document.getElementById("position");
+    const telElement = document.getElementById("tel");
+    const emailElement = document.getElementById("email");
+
+
+	const toCopy = document.getElementById('toCopy')
+
+    // Update the signature on input
+    nameInput.addEventListener("input", function() {
+      nameElement.textContent = nameInput.value;
+	  
+    });
+
+    positionInput.addEventListener("input", function() {
+      positionElement.textContent = positionInput.value;
+	  
+    });
+
+    telInput.addEventListener("input", function() {
+      telElement.textContent = telInput.value
+	  telElement.href = "tel:" + telInput.value.replace(/\s/g, '')
+    });   
+
+    emailInput.addEventListener("input", function() {
+      emailElement.textContent = emailInput.value;
+	  emailElement.href = "mailto:" + emailInput.value	  	  
+    });
+
+  });
+
+
+
+
+
+
+	function copySignature(lang) {
+		let toCopySection = document.getElementById("toCopy");
+
+		 copyToClipboard(toCopySection);
+	}
+
+	function copyCode(lang) {
+		  const templatePart1 = `<html>
+<head>
+  <title>Farsight Collective email signature generator</title> 
+</head>
+<body>`;
+    const templatePart2 = "\n</body></html>";
+
+      let toCopySection = document.getElementById("toCopy");
+    
+
+      const htmlContent = toCopySection.innerHTML;
+      const finalHTML = templatePart1 + htmlContent + templatePart2;
+
+		 navigator.clipboard.writeText(finalHTML)
+	}
+
+function copyToClipboard(whatToCopy) {     
+      const range = document.createRange();
+      range.selectNode(whatToCopy);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+    }
+
+</script>
+</body>
+</html>

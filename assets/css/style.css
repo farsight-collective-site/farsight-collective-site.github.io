@@ -563,6 +563,29 @@ li#mobileMenuLogo {
 }
 /* // HERO */
 
+
+/* ABOUT */
+#about-us {
+	color: #fff;
+	position: relative;
+	z-index: 0;
+}
+#about-us .bordered {
+	border: 2px solid #fff;
+	width: 100%;
+}
+#about-us .col {
+	padding: 4vw 3.5vw;
+}
+.about p {
+	margin-top: 2vw;
+	font-size: 1.4vw;
+	line-height: 1.7vw;
+}
+
+/* //ABOUT */
+
+
 /* MANIFESTO */
 #manifesto {
 	background-color: #000;
@@ -698,6 +721,9 @@ li#mobileMenuLogo {
 /* .team p:first-line {
 	line-height: 100% !important;
 } */
+.team .avatar {
+	max-width: 385px;
+}
 .team .teamData img {
 	max-width: 50px;
 	margin-right: 3vw;
@@ -974,19 +1000,6 @@ footer nav ul li:not(:last-child)::after {
 }
 /* // FOOTER */
 
-/* STICKY TESTS */
-/* #manifesto::before {
-	content: 'OUR MANIFESTO';
-	position: -webkit-sticky;
-	position: sticky;
-	left: 2rem;
-	top: 50vh;
-	transform: rotate(270deg);
-	transform-origin: left;
-}  */ 
-/* // STICKY TESTS */
-
-
 /* MODAL */
 .body-blackout {
 	position: absolute;
@@ -1082,12 +1095,13 @@ footer nav ul li:not(:last-child)::after {
 		font-size: 10vw;
 		line-height: 16vw;
 	}
-	.manifesto p {
+	.about p, .manifesto p {
 		margin: 4vw 0;
 		padding: 0 5vw;
 		font-size: 5.6vw;
 		line-height: 8vw;
 	}
+	#about-us .bordered,
 	#manifesto .bordered,
 	#team .bordered,
 	#contact .bordered,
@@ -1096,6 +1110,7 @@ footer nav ul li:not(:last-child)::after {
 		border-left: none;
 		border-bottom: none;
 	}
+	.about.mlr, 
 	.manifesto.mlr, 
 	.team.mlr,
 	.contact.mlr,

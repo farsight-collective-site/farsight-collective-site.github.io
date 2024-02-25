@@ -47,6 +47,9 @@ function openAccordionItem(menuItems)
 			// Bad fix. This was added so that the HTML stays the same.
 			
 			switch (itemToOpen) {
+				case '#about':
+					itemToOpen = '#about-us'
+					break;
 				case '#the-manifesto':
 					itemToOpen = '#manifesto'
 					break;

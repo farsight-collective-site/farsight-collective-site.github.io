@@ -103,6 +103,7 @@ input[type="submit"] {
 	font-weight: 400;
 }
 .emailCol h5 {
+	max-width: 15rem;
 	font-size: 2.2rem;
 	font-weight: 800;
 }
@@ -133,10 +134,10 @@ footer {
 		font-size: 1.1rem;
 	}
 	.details p {
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 	}
 	.communication h5 {
-		font-size: 1.1rem;
+		font-size: 1.2rem;
 	}
 	.col {
 		margin-bottom: 1rem;
@@ -148,19 +149,28 @@ footer {
 		font-size: 1rem;	
 	}
 	.emailCol span {
-		font-size: 1.1rem;
+		font-size: 1rem;
 	}
 	.preFooter {
-		padding: 0 0 3rem 0;
+		padding: 1rem 0;
 		text-align: center;		
+		border-top: 1px solid #cfbba6;
 	}
 	.preFooter img {
 		max-width: 190px;
 	}
 	footer {
 		text-align: center;
-		align-items: center;
 		padding-bottom: 1rem;
+	}
+	footer .flexAlignEnd {
+		align-items: center;
+	}
+	footer .footer .row {
+		flex-direction: column-reverse;
+	}
+	.details {
+		margin: 25px 0;
 	}
 }
 
@@ -177,6 +187,9 @@ footer {
 	input {
 		width: 60%;
 	}	
+	.emailCol h5 {
+		max-width: 28rem;
+	}
 	
 }
 

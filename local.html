@@ -27,45 +27,8 @@
         <link rel="stylesheet" href="assets/css/animate.css">
     </head>
     <body>
-        <!-- v -->
-        <header>
-            <div id="headerLogo">
-                <a href="/">
-                <img src="assets/images/logos/farshight-collective-logo.svg"
-                    alt="Farshight collective logo">
-                </a>
-            </div>
-            <div id="desktopMenu" class="hideMobile">
-                <nav class="syne">
-                    <ul>
-                        <li><a href="/">BACK TO SITE</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div id="menuToggle" class="hideDesktop">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <ul id="menu" class="hidden syne">
-                    <li id="menuTitleTop">
-                        <span>MENU</span>
-                    </li>
-                    <li> <a href="#about">ABOUT</a> </li>
-                    <li> <a href="#the-manifesto">MANIFESTO</a> </li>
-                    <li> <a href="#the-team">TEAM</a> </li>
-                    <li> <a href="#the-projects">PROJECTS</a> </li>
-                    <li> <a href="#contact-info">CONTACT US</a> </li>
-                    <li id="mobileMenuLogo">
-                        <img src="assets/images/logos/farshight-collective-eye-logo.svg"
-                            alt="farshight collective logo">
-                    </li>
-                    <li id="menuTitleBottom">
-                        <span>MENU</span>
-                    </li>
-                </ul>
-            </div>
-        </header>
+       
+      
         <main>
             <section id="intro">
                 <div>
@@ -76,7 +39,7 @@
                         <h2>PLEASE JOIN OUR INFORMATION <br> EVENTS FOR LOCAL RESIDENTS:</h2>
                         <h3>Saturday 2 March 2pm - 6pm</h3>
                         <h3>Wednesday 6 March 6pm-9pm</h3>
-                        <h3 class="small"><a href="https://maps.app.goo.gl/nxHL1Xf8Uua3d4oH8">4 Flitcroft Street, WC2H 8DJ</a></h3>
+                        <h3 class="small"><a href="https://maps.app.goo.gl/nxHL1Xf8Uua3d4oH8">4 Flitcroft Street, WC2H 8DJ (link to map)</a></h3>
                     </div>
                 </div>
             </section>
@@ -128,8 +91,10 @@
                     </div>
                 </div>
 				<div class="col emailCol">
-					<h5>EMAIL US TO REQUEST FULL PROPOSAL <br> AND LICENSING SUBMISSION</h5>
-					<a class="syne" href="mailto:local@farsightcollective.com">local@farsightcollective.com</a>
+					<a  href="mailto:local@farsightcollective.com">
+						<h5>EMAIL US TO REQUEST FULL PROPOSAL <br> AND LICENSING SUBMISSION</h5>
+						<span class="syne">local@farsightcollective.com</span>
+					</a>
 				
 				</div>
             </section>
@@ -154,36 +119,20 @@
                         <span>Farsight Collective ©2024</span>
                     </div>
                     <div class="hideMobile col flexAlignCenter">
-                        <div>
-                            <span>Menu</span>
-                            <nav>
-                                <ul>
-                                    <li><a class="hoverUnderline" href="/">Back to farsigh collective</a></li>
-                                </ul>
-                            </nav>
-                        </div>
+                      
                     </div>
                     <div class="col flexAlignEnd">
-                        <div class="hideMobile">
-                            <span>Site Designed & Developed</span>
-                            <br>
-                            <span>by <a class="hoverUnderline"
-                                href="https://devilsivycreative.com">Devil's Ivy Creative</a></span>
-                        </div>
-                        <div class="hideDesktop">
-                            <span>Site Designed & Developed by <a class="hoverUnderline"
-                                href="https://devilsivycreative.com">Devil's Ivy Creative</a></span>
-                        </div>
+						<nav>
+							<ul>
+								<li><a class="hoverUnderline" href="/">Back to Farsight Collective</a></li>
+							</ul>
+						</nav>
                     </div>
                 </div>
             </div>
         </footer>
         <script src="assets/js/script.js" defer></script>
         <script src="assets/js/animate.js" defer></script>
-        <script>
-            const header = document.querySelector('header')
-            const intro = document.getElementById('intro')
-            if (intro) intro.style.paddingTop = `${header.offsetHeight + 20}px`;
-        </script>
+       
     </body>
 </html>

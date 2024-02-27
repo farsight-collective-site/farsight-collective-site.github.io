@@ -100,6 +100,10 @@ input[type="submit"] {
 .emailCol a, .emailCol span {
 	font-weight: 400;
 }
+.emailCol h5 {
+	font-size: 2.2rem;
+	font-weight: 800;
+}
 .emailCol span {
 	display: block;
 	margin: 2rem 0;

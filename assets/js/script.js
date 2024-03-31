@@ -79,6 +79,16 @@ function openAccordionItem(menuItems)
 	})
 }
 
+const noPassDownloadButtons = document.querySelectorAll('.downloadButton')
+
+noPassDownloadButtons.forEach((btn) => { 
+	btn.addEventListener('click', () => { 
+		const downloadFileUrl = btn.getAttribute('data-download-file-url');
+
+		window.open(downloadFileUrl, '_blank');
+	})
+})
+
 
 // Modal
 const modalTriggers = document.querySelectorAll('.popup-trigger')
